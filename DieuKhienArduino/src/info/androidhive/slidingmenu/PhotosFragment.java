@@ -1,7 +1,5 @@
 package info.androidhive.slidingmenu;
 
-import java.io.IOException;
-
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;

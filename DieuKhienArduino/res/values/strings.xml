@@ -9,7 +9,7 @@
     
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item >Ngôi nhà thông minh</item>
+        <item >Cập nhật trạng thái</item>
         <item >Điều khiển tivi</item>
         <item >Điều khiển chiếu sáng</item>
         <item >Điều khiển điều hòa</item>

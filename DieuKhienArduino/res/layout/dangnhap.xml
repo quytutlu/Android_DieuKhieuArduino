@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/editTextTenDangNhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tên đăng nhập" 
+        android:layout_gravity="center">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextMatKhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword" 
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/buttonDangNhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Nhập" 
+        android:onClick="Onclick"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
