@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:src="@drawable/ic_people" />
+
+    <Button
+        android:id="@+id/btnBat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button02"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginLeft="31dp"
+        android:text="Bật Đèn 2" />
+
+    <Button
+        android:id="@+id/btnTat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnBat1"
+        android:layout_below="@+id/btnBat1"
+        android:text="Tắt Đèn 1" />
+
+    <Button
+        android:id="@+id/btnBat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/btnBat2"
+        android:text="Bật Đèn 1" />
+
+    <Button
+        android:id="@+id/btnTat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnBat2"
+        android:layout_below="@+id/btnBat2"
+        android:text="Tắt Đèn 2" />
+
+</RelativeLayout>
