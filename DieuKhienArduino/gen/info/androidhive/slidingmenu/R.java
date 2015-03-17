@@ -52,9 +52,9 @@ public final class R {
         public static final int list_selector=0x7f02000b;
     }
     public static final class id {
-        public static final int Button02=0x7f0a002d;
+        public static final int Button02=0x7f0a0034;
         public static final int LinearLayout2=0x7f0a0008;
-        public static final int action_settings=0x7f0a0031;
+        public static final int action_settings=0x7f0a0038;
         public static final int btn0=0x7f0a0016;
         public static final int btn1=0x7f0a000b;
         public static final int btn2=0x7f0a000c;
@@ -65,10 +65,10 @@ public final class R {
         public static final int btn7=0x7f0a0013;
         public static final int btn8=0x7f0a0014;
         public static final int btn9=0x7f0a0015;
-        public static final int btnBat1=0x7f0a002f;
-        public static final int btnBat2=0x7f0a002c;
-        public static final int btnTat1=0x7f0a002e;
-        public static final int btnTat2=0x7f0a0030;
+        public static final int btnBat1=0x7f0a0036;
+        public static final int btnBat2=0x7f0a0033;
+        public static final int btnTat1=0x7f0a0035;
+        public static final int btnTat2=0x7f0a0037;
         public static final int btnaudio=0x7f0a000e;
         public static final int btnchc=0x7f0a0019;
         public static final int btncht=0x7f0a001d;
@@ -94,13 +94,20 @@ public final class R {
         public static final int switchQuatDien1=0x7f0a0027;
         public static final int switchQuatDien2=0x7f0a0028;
         public static final int switchTivi=0x7f0a002b;
+        public static final int textView=0x7f0a0025;
         public static final int textView1=0x7f0a0020;
         public static final int textView2=0x7f0a0022;
         public static final int textView3=0x7f0a0024;
         public static final int textView4=0x7f0a0026;
         public static final int textView5=0x7f0a0029;
         public static final int textView6=0x7f0a002a;
-        public static final int textViewNhietDo=0x7f0a0025;
+        public static final int textViewCoNguoi=0x7f0a0031;
+        public static final int textViewDenComPac=0x7f0a002c;
+        public static final int textViewDenTuypDai=0x7f0a002d;
+        public static final int textViewNhietDo=0x7f0a0032;
+        public static final int textViewQuatDien1=0x7f0a002e;
+        public static final int textViewQuatDien2=0x7f0a002f;
+        public static final int textViewTivi=0x7f0a0030;
         public static final int title=0x7f0a0007;
     }
     public static final class layout {

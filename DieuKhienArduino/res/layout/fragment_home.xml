@@ -48,13 +48,13 @@
         android:layout_alignLeft="@+id/switchDenComPac" />
 
     <TextView
-        android:id="@+id/textViewNhietDo"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/textView3"
         android:layout_marginTop="50dp"
-        android:text="Nhiệt độ:--"
+        android:text="Nhiệt độ:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textViewNhietDo"
+        android:layout_below="@+id/textView"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="24dp"
         android:text="Có người ở nhà"
@@ -130,5 +130,74 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView6"
         android:layout_alignLeft="@+id/switchQuatDien2" />
+
+    <TextView
+        android:id="@+id/textViewDenComPac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchDenComPac"
+        android:layout_alignBottom="@+id/switchDenComPac"
+        android:layout_alignParentRight="true"
+        android:text="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewDenTuypDai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchDenTuypDai"
+        android:layout_alignBottom="@+id/switchDenTuypDai"
+        android:layout_alignParentRight="true"
+        android:text="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewQuatDien1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchQuatDien1"
+        android:layout_alignBottom="@+id/switchQuatDien1"
+        android:layout_alignParentRight="true"
+        android:text="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewQuatDien2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchQuatDien2"
+        android:layout_alignBottom="@+id/switchQuatDien2"
+        android:layout_alignParentRight="true"
+        android:text="false" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewTivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchTivi"
+        android:layout_alignBottom="@+id/switchTivi"
+        android:layout_alignParentRight="true"
+        android:text="false" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewCoNguoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxCoNguoi"
+        android:layout_alignBottom="@+id/checkBoxCoNguoi"
+        android:layout_toRightOf="@+id/checkBoxCoNguoi"
+        android:text="false" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewNhietDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignLeft="@+id/checkBoxCoNguoi"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
