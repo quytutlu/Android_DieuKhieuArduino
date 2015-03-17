@@ -10,8 +10,10 @@ import Object.ThietBi;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,6 +26,7 @@ import android.widget.Toast;
 public class HomeFragment extends Fragment {
 
 	Switch DenComPac, DenTuypDai, QuatDien1, QuatDien2, Tivi;
+	Vibrator vibrator;
 	TextView NhietDo, textViewCoNguoi, textViewDenComPac, textViewDenTuypDai,
 			textViewQuatDien1, textViewQuatDien2, textViewTivi;
 	CheckBox CoNguoi;
@@ -44,6 +47,7 @@ public class HomeFragment extends Fragment {
 				false);
 		dialog = new ProgressDialog(getActivity());
 		dialog1 = new ProgressDialog(getActivity());
+		vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 		DenComPac = (Switch) rootView.findViewById(R.id.switchDenComPac);
 		DenTuypDai = (Switch) rootView.findViewById(R.id.switchDenTuypDai);
 		QuatDien1 = (Switch) rootView.findViewById(R.id.switchQuatDien1);
@@ -69,6 +73,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=dencompac";
 					lableBatTat = "Bật đèn compact...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
@@ -84,6 +89,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=dentuypdai";
 					lableBatTat = "Bật đèn tuýp dài...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
@@ -99,6 +105,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=quatdien1";
 					lableBatTat = "Bật quạt điện 1...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
@@ -114,6 +121,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=quatdien2";
 					lableBatTat = "Bật quạt điện 2...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
@@ -129,6 +137,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=tivi";
 					lableBatTat = "Bật đèn tivi...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
@@ -154,6 +163,7 @@ public class HomeFragment extends Fragment {
 					url = "http://192.99.66.193:1234/Arduino/?cmd=batthietbi&tenthietbi=conguoionha";
 					lableBatTat = "Đang kích hoạt...";
 				}
+				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
 			}
 		});
