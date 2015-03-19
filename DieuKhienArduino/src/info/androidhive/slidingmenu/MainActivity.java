@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new HomeFragment();
+			fragment = new DieuKhienArduino();
 			break;
 		case 1:
 			fragment = new FindPeopleFragment();
