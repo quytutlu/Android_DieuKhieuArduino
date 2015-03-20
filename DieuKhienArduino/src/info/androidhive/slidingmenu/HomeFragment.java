@@ -3,7 +3,6 @@ package info.androidhive.slidingmenu;
 import java.util.ArrayList;
 import java.util.List;
 
-import Object.ArrThietBi;
 import Object.ThietBi;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -15,42 +14,54 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressLint("ViewHolder") public class HomeFragment extends ArrayAdapter<ArrThietBi> {
-
-	
+@SuppressLint("ViewHolder") public class HomeFragment extends ArrayAdapter<ThietBi> {
 
 	Switch DenComPac, DenTuypDai, QuatDien1, QuatDien2, Tivi;
 	Vibrator vibrator;
 	TextView NhietDo, textViewCoNguoi, textViewDenComPac, textViewDenTuypDai,
 			textViewQuatDien1, textViewQuatDien2, textViewTivi;
+	ImageView home;
 	CheckBox CoNguoi;
 	ProgressDialog dialog;
 	String nd = "", dcp = "", dtd = "", qd1 = "", qd2 = "", tv = "", cn = "",url;
 	List<ThietBi> tb;
 	String lableBatTat;
+	boolean flag;
 	
 	private Context context;
 	@SuppressWarnings("unused")
 	private int layoutId;
-	public HomeFragment(Context context, int layoutId,List<ArrThietBi> arrThietBi) {
-		super(context, layoutId,arrThietBi);
+	public HomeFragment(Context context, int layoutId,List<ThietBi> ThietBi) {
+		super(context, layoutId,ThietBi);
 		tb = new ArrayList<ThietBi>();
 		this.context = context;
 		this.layoutId = layoutId;
-		this.tb = arrThietBi.get(0).tb;
+		this.tb = ThietBi;
 		dialog = new ProgressDialog(getContext());
 		vibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
 	}
 	@Override
+	public int getCount() {
+		return 1;
+	}
+	@SuppressLint("InflateParams") @Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		if(position!=0)
+		{
+			View tempView = inflater.inflate(android.R.layout.simple_expandable_list_item_1, null);
+			tempView.setEnabled(false);
+			return tempView;
+		}
 		View rowView = inflater.inflate(R.layout.fragment_home, parent, false);
 		DenComPac = (Switch) rowView.findViewById(R.id.switchDenComPac);
 		DenTuypDai = (Switch) rowView.findViewById(R.id.switchDenTuypDai);
@@ -65,6 +76,11 @@ import android.widget.Toast;
 		textViewQuatDien1=(TextView) rowView.findViewById(R.id.textViewQuatDien1);
 		textViewQuatDien2=(TextView) rowView.findViewById(R.id.textViewQuatDien2);
 		textViewTivi=(TextView) rowView.findViewById(R.id.textViewTivi);
+		home=(ImageView) rowView.findViewById(R.id.imageView1);
+		WindowManager windowManager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+		@SuppressWarnings("deprecation")
+		int h=windowManager.getDefaultDisplay().getHeight();
+		rowView.setMinimumHeight(h-150);
 		DenComPac.setOnClickListener(new OnClickListener() {
 			
 			@Override
