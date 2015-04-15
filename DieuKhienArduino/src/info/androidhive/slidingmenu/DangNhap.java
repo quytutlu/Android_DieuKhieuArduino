@@ -16,7 +16,8 @@ public class DangNhap extends Activity{
 	ProgressDialog dialog;
 	EditText TenDangNhap,MatKhau;
 	String url="";
-	boolean flag=false;
+	String id="";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -34,7 +35,7 @@ public class DangNhap extends Activity{
 		switch(v.getId())
 		{
 		case R.id.buttonDangNhap:
-			url="http://192.99.66.193:1234/Arduino/?cmd=dangnhap&tendangnhap="+TenDangNhap.getText();
+			url="http://192.99.66.193:1234/kltn_arduino/?cmd=dangnhap&tendangnhap="+TenDangNhap.getText();
 			url+="&matkhau="+MatKhau.getText();
 			new ParseJSONTask().execute();
 			break;
@@ -59,11 +60,9 @@ public class DangNhap extends Activity{
 			}
 			try {
 				JSONObject object=new JSONObject(jsonstr);
-				flag=object.getBoolean("success");
+				id=object.getString("id");
 				return true;
 			} catch (Exception e) {
-				Toast.makeText(DangNhap.this,
-						"Không kết nối được server", Toast.LENGTH_SHORT).show();
 				e.printStackTrace();
 			}
 			return false;
@@ -76,21 +75,23 @@ public class DangNhap extends Activity{
 				dialog.dismiss();
 			}
 			if(result==false){
+				Toast.makeText(DangNhap.this, id, Toast.LENGTH_SHORT).show();
 				AlertDialog.Builder builder=new AlertDialog.Builder(DangNhap.this);
 				builder.setTitle("Lỗi!");
 				builder.setMessage("Kiểm tra kết nối mạng");
 				builder.show();
 				return;
 			}
-			if(flag)
+			if(!id.equals("-1"))
 			{
-				Toast.makeText(DangNhap.this, "Thành công", Toast.LENGTH_SHORT).show();
+//				Toast.makeText(DangNhap.this, "Thành công"+id, Toast.LENGTH_SHORT).show();
 				Intent t =new Intent(DangNhap.this,MainActivity.class);
+				t.putExtra("idNguoiDung", id);
 				startActivity(t);
 				
 			}else
 			{
-				Toast.makeText(DangNhap.this, "Thất bại", Toast.LENGTH_SHORT).show();
+				Toast.makeText(DangNhap.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
 			}
 		}
 	}

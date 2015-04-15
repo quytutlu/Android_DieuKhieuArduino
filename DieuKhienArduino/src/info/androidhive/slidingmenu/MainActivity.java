@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class MainActivity extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
-
+	private String idNguoiDung="";
 	// nav drawer title
 	private CharSequence mDrawerTitle;
 
@@ -43,7 +44,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		Intent intent = getIntent();
+		idNguoiDung=intent.getStringExtra("idNguoiDung");
 		//btAdapter = BluetoothAdapter.getDefaultAdapter();
 		
 		mTitle = mDrawerTitle = getTitle();
@@ -67,12 +69,12 @@ public class MainActivity extends Activity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
 		// Photos
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-		// Communities, Will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
-		// Pages
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-		// What's hot, We  will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
+//		// Communities, Will add a counter here
+//		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
+//		// Pages
+//		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+//		// What's hot, We  will add a counter here
+//		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
 		
 
 		// Recycle the typed array
@@ -167,23 +169,23 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new DieuKhienArduino();
+			fragment = new DieuKhienArduino(idNguoiDung);
 			break;
 		case 1:
-			fragment = new FindPeopleFragment();
+			fragment = new ThongTinCaNhan(idNguoiDung);
 			break;
 		case 2:
-			fragment = new PhotosFragment();
+			fragment = new GioiThieu();
 			break;
-		case 3:
-			fragment = new CommunityFragment();
-			break;
-		case 4:
-			fragment = new PagesFragment();
-			break;
-		case 5:
-			fragment = new WhatsHotFragment();
-			break;
+//		case 3:
+//			fragment = new CommunityFragment();
+//			break;
+//		case 4:
+//			fragment = new PagesFragment();
+//			break;
+//		case 5:
+//			fragment = new WhatsHotFragment();
+//			break;
 
 		default:
 			break;

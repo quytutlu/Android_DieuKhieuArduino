@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/info/androidhive/slidingmenu/DangNhap.java=UTF-8
 encoding//src/info/androidhive/slidingmenu/DieuKhienArduino.java=UTF-8
-encoding//src/info/androidhive/slidingmenu/HomeFragment.java=UTF-8
-encoding//src/info/androidhive/slidingmenu/PhotosFragment.java=UTF-8
+encoding//src/info/androidhive/slidingmenu/GioiThieu.java=UTF-8
+encoding//src/info/androidhive/slidingmenu/RowThietBiAdapter.java=UTF-8
+encoding//src/info/androidhive/slidingmenu/ThongTinCaNhan.java=UTF-8

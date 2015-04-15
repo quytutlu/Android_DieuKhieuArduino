@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Điều Khiển Arduino</string>
+    <string name="app_name">Smart Home</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
+    <string name="ThongTinTaiKhoan">Thông tin tài khoản</string>
+    <string name="MaTaiKhoan">Mã tài khoản</string>
+    <string name="TenDangNhap">Tên đăng nhập</string>
+    <string name="Email">Email</string>
+    <string name="SDT">SĐT</string>
+    <string name="NguoiTao">Người tạo</string>
+    <string name="VaiTro">Vai trò</string>
     
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item >Cập nhật trạng thái</item>
-        <item >Điều khiển tivi</item>
-        <item >Điều khiển chiếu sáng</item>
-        <item >Điều khiển điều hòa</item>
-        <item >Hiển thị nhiệt độ</item>
-        <item >Báo cháy</item>
+        <item >Thông tin cá nhân</item>
+        <item >Giới thiệu</item>
     </string-array>
     
     <!-- Nav Drawer List Item Icons -->

@@ -3,7 +3,6 @@ package info.androidhive.slidingmenu;
 import info.androidhive.slidingmenu.PullToRefreshListView.OnRefreshListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,27 +10,22 @@ import org.json.JSONObject;
 import Object.ThietBi;
 import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class DieuKhienArduino extends Fragment {
-	String url = "http://192.99.66.193:1234/Arduino/?cmd=laytrangthai";
-	List<ThietBi> tb;
+	String url = "";
+	ArrayList<ThietBi> tb;
 	PullToRefreshListView lv;
-	HomeFragment adapter;
-	private int h;
-
-	public DieuKhienArduino() {
+	RowThietBiAdapter adapter;
+	private String idNguoiDung="";
+	public DieuKhienArduino(String idNguoiDung) {
+		this.idNguoiDung=idNguoiDung;
 	}
-
-	@SuppressWarnings("deprecation")
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -41,12 +35,10 @@ public class DieuKhienArduino extends Fragment {
 		if (!tb.isEmpty()) {
 			tb.clear();
 		}
+		url="http://192.99.66.193:1234/kltn_arduino/?cmd=laytrangthai&id="+idNguoiDung;
 		new ParseJSONTask().execute();
 		lv = (info.androidhive.slidingmenu.PullToRefreshListView) rootView
 				.findViewById(R.id.listrf);
-		WindowManager windowManager = (WindowManager)getActivity().getSystemService(Context.WINDOW_SERVICE);
-		h = windowManager.getDefaultDisplay().getHeight();
-		lv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, h-150));
 		lv.setOnRefreshListener(new OnRefreshListener() {
 
 			@Override
@@ -54,10 +46,11 @@ public class DieuKhienArduino extends Fragment {
 				if (!tb.isEmpty()) {
 					tb.clear();
 				}
+				url="http://192.99.66.193:1234/kltn_arduino/?cmd=laytrangthai&id="+idNguoiDung;
 				new ParseJSONTask().execute();
 			}
 		});
-		adapter = new HomeFragment(getActivity(), R.layout.fragment_home, tb);
+		adapter=new RowThietBiAdapter(getActivity(), R.layout.row_thiet_bi, tb,idNguoiDung);
 		lv.setAdapter(adapter);
 		return rootView;
 	}
@@ -82,14 +75,14 @@ public class DieuKhienArduino extends Fragment {
 				for (int i = 0; i < array.length(); i++) {
 					JSONObject jsonObject = array.getJSONObject(i);
 					ThietBi temp = new ThietBi();
+					temp.id=jsonObject.getString("id");
 					temp.TenThietBi = jsonObject.getString("TenThietBi");
 					temp.TrangThai = jsonObject.getString("TrangThai");
+					temp.ReadOnly=jsonObject.getString("ReadOnly");
 					tb.add(temp);
 				}
 				return true;
 			} catch (Exception e) {
-				Toast.makeText(getActivity(), "Không kết nối được server",
-						Toast.LENGTH_SHORT).show();
 				e.printStackTrace();
 			}
 			return false;
@@ -104,6 +97,8 @@ public class DieuKhienArduino extends Fragment {
 				builder.setTitle("Lỗi!");
 				builder.setMessage("Kiểm tra kết nối mạng");
 				builder.show();
+				adapter.notifyDataSetChanged();
+				lv.onRefreshComplete();
 				return;
 			}
 			adapter.notifyDataSetChanged();
