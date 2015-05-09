@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 public class ThongTinCaNhan extends Fragment {
 
-	TextView tvMaTaiKhoan,tvTenDangNhap,tvEmail,tvSDT,tvNguoiTao,tvVaiTro;
-	String MaTaiKhoan,TenDangNhap,Email,SDT,NguoiTao,VaiTro;
+	TextView tvMaTaiKhoan,tvTenDangNhap,tvEmail,tvSDT,tvNguoiTao,tvVaiTro,tvNgayThamGia,tvHanDung;
+	String MaTaiKhoan,TenDangNhap,Email,SDT,NguoiTao,VaiTro,NgayThamGia,HanDung;
 	String url;
 	ProgressDialog dialog;
 	public ThongTinCaNhan(String idNguoiDung) {
@@ -34,6 +34,8 @@ public class ThongTinCaNhan extends Fragment {
 		tvSDT=(TextView) rootView.findViewById(R.id.tvSDT);
 		tvNguoiTao=(TextView) rootView.findViewById(R.id.tvNguoiTao);
 		tvVaiTro=(TextView) rootView.findViewById(R.id.tvVaiTro);
+		tvNgayThamGia=(TextView) rootView.findViewById(R.id.tvNgayThamGia);
+		tvHanDung=(TextView) rootView.findViewById(R.id.tvHanDung);
 		dialog=new ProgressDialog(getActivity());
 		new ParseJSONTask().execute();
 		return rootView;
@@ -60,6 +62,8 @@ public class ThongTinCaNhan extends Fragment {
 				SDT=object.getString("SDT");
 				NguoiTao=object.getString("NguoiTao");
 				VaiTro=object.getString("VaiTro");
+				NgayThamGia=object.getString("NgayThamGia");
+				HanDung=object.getString("HanDung");
 				return true;
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -86,6 +90,8 @@ public class ThongTinCaNhan extends Fragment {
 			tvSDT.setText("SĐT: "+SDT);
 			tvNguoiTao.setText("Người tạo: "+NguoiTao);
 			tvVaiTro.setText("Vai trò: "+VaiTro);
+			tvNgayThamGia.setText("Ngày tham gia: "+NgayThamGia);
+			tvHanDung.setText("Hạn dùng: "+HanDung);
 		}
 	}
 }

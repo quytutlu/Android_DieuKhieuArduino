@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Tên đăng nhập" 
+        android:hint="@string/TenDangNhap" 
         android:layout_gravity="center">
 
         <requestFocus />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Mật khẩu"
+        android:hint="@string/MatKhau"
         android:inputType="textPassword" 
         android:layout_gravity="center"/>
 
@@ -30,7 +30,7 @@
         android:id="@+id/buttonDangNhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Đăng Nhập" 
+        android:text="@string/DangNhap" 
         android:onClick="Onclick"
         android:layout_gravity="center"/>
 
