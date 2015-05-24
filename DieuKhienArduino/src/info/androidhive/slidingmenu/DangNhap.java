@@ -18,6 +18,9 @@ public class DangNhap extends Activity {
 	String url = "";
 	String id = "";
 	String Active = "";
+	String VaiTro="";
+	String Email="";
+	String SDT="";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,7 @@ public class DangNhap extends Activity {
 	public void Onclick(View v) {
 		switch (v.getId()) {
 		case R.id.buttonDangNhap:
-			url = "http://192.99.66.193:1234/kltn_arduino/?cmd=dangnhap&tendangnhap="
+			url = "http://92.222.72.172/index.php?cmd=dangnhap&tendangnhap="
 					+ TenDangNhap.getText();
 			url += "&matkhau=" + MatKhau.getText();
 			new ParseJSONTask().execute();
@@ -65,6 +68,9 @@ public class DangNhap extends Activity {
 				JSONObject object = new JSONObject(jsonstr);
 				Active = object.getString("active");
 				id = object.getString("id");
+				VaiTro=object.getString("VaiTro");
+				Email=object.getString("Email");
+				SDT=object.getString("SDT");
 				return true;
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -79,6 +85,7 @@ public class DangNhap extends Activity {
 				dialog.dismiss();
 			}
 			if (result == false) {
+				Toast.makeText(DangNhap.this, id, Toast.LENGTH_LONG).show();
 				AlertDialog.Builder builder = new AlertDialog.Builder(
 						DangNhap.this);
 				builder.setTitle("Lỗi!");

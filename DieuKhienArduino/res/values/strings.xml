@@ -6,7 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
-    <string name="ThongTinTaiKhoan">Thông tin tài khoản</string>
+    <string name="ThongTinTaiKhoan">Thông tin cá nhân</string>
     <string name="MaTaiKhoan">Mã tài khoản</string>
     <string name="TenDangNhap">Tên đăng nhập</string>
     <string name="MatKhau">Mật khẩu</string>
@@ -17,7 +17,16 @@
     <string name="VaiTro">Vai trò</string>
     <string name="NgayThamGia">Ngày tham gia</string>
     <string name="HanDung">Hạn dùng</string>
-    
+    <string name="GioiThieu">Ứng dụng SmartHome cho phép người dùng theo dõi và điều khiển thiết bị điện trong nhà bằng điện thoại Android</string>
+    <!-- <string name="GioiThieu">Điều khiển thiết bị điện sử dụng điện thoại chạy hệ điều hành Android</string> -->
+    <string name="ThongTinTacGia">Thông tin tác giả </string>
+    <string name="Ten">Nguyễn Quý Tú</string>
+    <!-- <string name="Ten">Dương Hữu Hải</string> -->
+    <string	name="DiaChi">Địa chỉ: Ba Vì - Hà Nội</string>
+	<string name="Mail">Email: quytutlu@gmail.com</string>
+	<!-- <string name="Mail">Lớp: CNĐTK9A</string> -->
+	<string name="Phone">Phone: 01688 55 88 10</string>
+	<!-- <string name="Phone">Phone: 01692848920</string> -->
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item >Cập nhật trạng thái</item>

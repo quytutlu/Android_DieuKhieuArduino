@@ -13,7 +13,8 @@ public final class R {
  Keep them in order as the titles are in 
          */
         public static final int nav_drawer_icons=0x7f070001;
-        /**  Nav Drawer Menu Items 
+        /**  <string name="Phone">Phone: 01692848920</string> 
+ Nav Drawer Menu Items 
          */
         public static final int nav_drawer_items=0x7f070000;
     }
@@ -55,7 +56,7 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0009;
-        public static final int action_settings=0x7f0a001b;
+        public static final int action_settings=0x7f0a0022;
         public static final int buttonDangNhap=0x7f0a0005;
         public static final int drawer_layout=0x7f0a0000;
         public static final int editTextMatKhau=0x7f0a0004;
@@ -64,24 +65,31 @@ public final class R {
         public static final int icon=0x7f0a0007;
         public static final int list_slidermenu=0x7f0a0002;
         public static final int listrf=0x7f0a0006;
-        public static final int pull_to_refresh_header=0x7f0a000a;
-        public static final int pull_to_refresh_image=0x7f0a000c;
-        public static final int pull_to_refresh_progress=0x7f0a000b;
-        public static final int pull_to_refresh_text=0x7f0a000d;
-        public static final int pull_to_refresh_updated_at=0x7f0a000e;
-        public static final int swTrangThai=0x7f0a0010;
+        public static final int pull_to_refresh_header=0x7f0a0011;
+        public static final int pull_to_refresh_image=0x7f0a0013;
+        public static final int pull_to_refresh_progress=0x7f0a0012;
+        public static final int pull_to_refresh_text=0x7f0a0014;
+        public static final int pull_to_refresh_updated_at=0x7f0a0015;
+        public static final int scrollView1=0x7f0a000a;
+        public static final int swTrangThai=0x7f0a0017;
+        public static final int textView1=0x7f0a000b;
+        public static final int textView2=0x7f0a000c;
+        public static final int textView3=0x7f0a000d;
+        public static final int textView4=0x7f0a000e;
+        public static final int textView5=0x7f0a000f;
+        public static final int textView6=0x7f0a0010;
         public static final int title=0x7f0a0008;
-        public static final int tvEmail=0x7f0a0015;
-        public static final int tvHanDung=0x7f0a001a;
-        public static final int tvMaTaiKhoan=0x7f0a0013;
-        public static final int tvNgayThamGia=0x7f0a0019;
-        public static final int tvNguoiTao=0x7f0a0017;
-        public static final int tvReadOnly=0x7f0a0011;
-        public static final int tvSDT=0x7f0a0016;
-        public static final int tvTenDangNhap=0x7f0a0014;
-        public static final int tvThietBi=0x7f0a000f;
-        public static final int tvThongTinTaiKhoan=0x7f0a0012;
-        public static final int tvVaiTro=0x7f0a0018;
+        public static final int tvEmail=0x7f0a001c;
+        public static final int tvHanDung=0x7f0a0021;
+        public static final int tvMaTaiKhoan=0x7f0a001a;
+        public static final int tvNgayThamGia=0x7f0a0020;
+        public static final int tvNguoiTao=0x7f0a001e;
+        public static final int tvReadOnly=0x7f0a0018;
+        public static final int tvSDT=0x7f0a001d;
+        public static final int tvTenDangNhap=0x7f0a001b;
+        public static final int tvThietBi=0x7f0a0016;
+        public static final int tvThongTinTaiKhoan=0x7f0a0019;
+        public static final int tvVaiTro=0x7f0a001f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -98,21 +106,33 @@ public final class R {
     }
     public static final class string {
         public static final int DangNhap=0x7f060009;
+        /**  <string name="Ten">Dương Hữu Hải</string> 
+         */
+        public static final int DiaChi=0x7f060013;
         public static final int Email=0x7f06000a;
+        public static final int GioiThieu=0x7f060010;
         public static final int HanDung=0x7f06000f;
         public static final int MaTaiKhoan=0x7f060006;
+        public static final int Mail=0x7f060014;
         public static final int MatKhau=0x7f060008;
         public static final int NgayThamGia=0x7f06000e;
         public static final int NguoiTao=0x7f06000c;
+        /**  <string name="Mail">Lớp: CNĐTK9A</string> 
+         */
+        public static final int Phone=0x7f060015;
         public static final int SDT=0x7f06000b;
+        public static final int Ten=0x7f060012;
         public static final int TenDangNhap=0x7f060007;
+        /**  <string name="GioiThieu">Điều khiển thiết bị điện sử dụng điện thoại chạy hệ điều hành Android</string> 
+         */
+        public static final int ThongTinTacGia=0x7f060011;
         public static final int ThongTinTaiKhoan=0x7f060005;
         public static final int VaiTro=0x7f06000d;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         /**  Content Description 
          */
-        public static final int desc_list_item_icon=0x7f060010;
+        public static final int desc_list_item_icon=0x7f060016;
         public static final int drawer_close=0x7f060004;
         public static final int drawer_open=0x7f060003;
         public static final int hello_world=0x7f060002;
