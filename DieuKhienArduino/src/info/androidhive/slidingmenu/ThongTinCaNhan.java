@@ -19,7 +19,7 @@ public class ThongTinCaNhan extends Fragment {
 	String url;
 	ProgressDialog dialog;
 	public ThongTinCaNhan(String idNguoiDung) {
-		url="http://92.222.72.172/index.php?cmd=laythongtinnguoidung&id="+idNguoiDung;
+		url="http://smarthometl.com/index.php?cmd=laythongtinnguoidung&id="+idNguoiDung;
 	}
 
 	@Override

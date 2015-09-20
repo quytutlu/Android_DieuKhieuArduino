@@ -33,5 +33,11 @@
         android:text="@string/DangNhap" 
         android:onClick="Onclick"
         android:layout_gravity="center"/>
+	<com.facebook.widget.LoginButton 
+		android:id="@+id/fbbtn"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content" 
+		android:layout_centerInParent="true"   
+	    android:layout_gravity="center"/>
 
 </LinearLayout>

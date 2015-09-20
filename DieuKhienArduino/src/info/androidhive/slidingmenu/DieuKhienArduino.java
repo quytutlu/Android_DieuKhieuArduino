@@ -35,7 +35,7 @@ public class DieuKhienArduino extends Fragment {
 		if (!tb.isEmpty()) {
 			tb.clear();
 		}
-		url="http://92.222.72.172/index.php?cmd=laytrangthai&id="+idNguoiDung;
+		url="http://smarthometl.com/index.php?cmd=laytrangthai&id="+idNguoiDung;
 		new ParseJSONTask().execute();
 		lv = (info.androidhive.slidingmenu.PullToRefreshListView) rootView
 				.findViewById(R.id.listrf);
@@ -46,7 +46,7 @@ public class DieuKhienArduino extends Fragment {
 				if (!tb.isEmpty()) {
 					tb.clear();
 				}
-				url="http://92.222.72.172/index.php?cmd=laytrangthai&id="+idNguoiDung;
+				url="http://smarthometl.com/index.php?cmd=laytrangthai&id="+idNguoiDung;
 				new ParseJSONTask().execute();
 			}
 		});

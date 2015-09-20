@@ -56,11 +56,11 @@ public class RowThietBiAdapter extends ArrayAdapter<ThietBi>{
 			@Override
 			public void onClick(View v) {
 				if(!TrangThai.isChecked()){
-					url="http://92.222.72.172/index.php?cmd=tatthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
+					url="http://smarthometl.com/index.php?cmd=tatthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
 					lableBatTat=arrThietBi.get(index).TenThietBi;
 					lableBatTat+=" đang tắt...";
 				}else{
-					url="http://92.222.72.172/index.php?cmd=batthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
+					url="http://smarthometl.com/index.php?cmd=batthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
 					lableBatTat=arrThietBi.get(index).TenThietBi;
 					lableBatTat+=" đang bật...";
 				}
