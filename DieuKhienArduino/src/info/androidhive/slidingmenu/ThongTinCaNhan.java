@@ -58,6 +58,10 @@ public class ThongTinCaNhan extends Fragment {
 				JSONObject object=new JSONObject(jsonstr);
 				MaTaiKhoan=object.getString("id");
 				TenDangNhap=object.getString("TenDangNhap");
+				if(TenDangNhap.substring(0, 7).equals("{\"name\"")){
+					JSONObject ob=new JSONObject(TenDangNhap);
+					TenDangNhap=ob.getString("name");
+				}
 				Email=object.getString("Email");
 				SDT=object.getString("SDT");
 				NguoiTao=object.getString("NguoiTao");

@@ -2,6 +2,7 @@ package info.androidhive.slidingmenu;
 
 import java.util.ArrayList;
 
+
 import Object.ThietBi;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,6 +20,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class RowThietBiAdapter extends ArrayAdapter<ThietBi>{
 
@@ -47,7 +49,7 @@ public class RowThietBiAdapter extends ArrayAdapter<ThietBi>{
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View rowView = inflater.inflate(R.layout.row_thiet_bi, parent, false);
 		TextView TenThietBi=(TextView) rowView.findViewById(R.id.tvThietBi);
-		final Switch TrangThai=(Switch) rowView.findViewById(R.id.swTrangThai);
+		final ToggleButton TrangThai=(ToggleButton) rowView.findViewById(R.id.swTrangThai);
 		TextView TrangThaiReadOnly=(TextView) rowView.findViewById(R.id.tvReadOnly);
 		final String idThietBi=arrThietBi.get(position).id;
 		final int index=position;
@@ -55,28 +57,17 @@ public class RowThietBiAdapter extends ArrayAdapter<ThietBi>{
 			
 			@Override
 			public void onClick(View v) {
-				if(!TrangThai.isChecked()){
-					url="http://smarthometl.com/index.php?cmd=tatthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
-					lableBatTat=arrThietBi.get(index).TenThietBi;
-					lableBatTat+=" đang tắt...";
-				}else{
+				if(TrangThai.isChecked()){
 					url="http://smarthometl.com/index.php?cmd=batthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
 					lableBatTat=arrThietBi.get(index).TenThietBi;
 					lableBatTat+=" đang bật...";
+				}else{
+					url="http://smarthometl.com/index.php?cmd=tatthietbi&id="+idNguoiDung+"&idthietbi="+idThietBi;
+					lableBatTat=arrThietBi.get(index).TenThietBi;
+					lableBatTat+=" đang tắt...";
 				}
 				vibrator.vibrate(100);
 				new ParseJSONTaskBatTat().execute();
-			}
-		});
-		TrangThai.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				if(!isChecked){
-					
-				}else{
-					
-				}
-				
 			}
 		});
 		TenThietBi.setText(arrThietBi.get(position).TenThietBi);

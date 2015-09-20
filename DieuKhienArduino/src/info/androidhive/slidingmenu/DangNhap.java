@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -132,6 +133,7 @@ public class DangNhap extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.dangnhap);
 		Init();
 		uihelper = new UiLifecycleHelper(this, callback);
@@ -215,7 +217,7 @@ public class DangNhap extends Activity {
 				dialog.dismiss();
 			}
 			if (result == false) {
-				Toast.makeText(DangNhap.this, id, Toast.LENGTH_LONG).show();
+				//Toast.makeText(DangNhap.this, id, Toast.LENGTH_LONG).show();
 				AlertDialog.Builder builder = new AlertDialog.Builder(
 						DangNhap.this);
 				builder.setTitle("Lỗi!");

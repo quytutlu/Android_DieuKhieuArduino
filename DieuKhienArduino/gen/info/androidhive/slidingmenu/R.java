@@ -296,7 +296,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f020015;
         public static final int com_facebook_loginbutton_silver=0x7f020016;
         public static final int com_facebook_logo=0x7f020017;
-        public static final int com_facebook_picker_default_separator_color=0x7f02003d;
+        public static final int com_facebook_picker_default_separator_color=0x7f020046;
         public static final int com_facebook_picker_item_background=0x7f020018;
         public static final int com_facebook_picker_list_focused=0x7f020019;
         public static final int com_facebook_picker_list_longpressed=0x7f02001a;
@@ -331,9 +331,18 @@ containing a value of this type.
         public static final int ic_photos=0x7f020037;
         public static final int ic_pulltorefresh_arrow=0x7f020038;
         public static final int ic_whats_hot=0x7f020039;
-        public static final int list_item_bg_normal=0x7f02003a;
-        public static final int list_item_bg_pressed=0x7f02003b;
-        public static final int list_selector=0x7f02003c;
+        public static final int ios_off=0x7f02003a;
+        public static final int ios_thumb=0x7f02003b;
+        public static final int list_item_bg_normal=0x7f02003c;
+        public static final int list_item_bg_pressed=0x7f02003d;
+        public static final int list_selector=0x7f02003e;
+        public static final int md_back_off=0x7f02003f;
+        public static final int md_back_on=0x7f020040;
+        public static final int password=0x7f020041;
+        public static final int toggle_off=0x7f020042;
+        public static final int toggle_on=0x7f020043;
+        public static final int toggle_selector=0x7f020044;
+        public static final int user=0x7f020045;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f040030;
@@ -528,6 +537,10 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080004;
+        /**  style title 
+         */
+        public static final int StyleTitleText=0x7f080005;
+        public static final int SwitchButtonStyle=0x7f080006;
         public static final int com_facebook_loginview_default_style=0x7f080000;
         public static final int com_facebook_loginview_silver_style=0x7f080001;
         public static final int tooltip_bubble_text=0x7f080002;
